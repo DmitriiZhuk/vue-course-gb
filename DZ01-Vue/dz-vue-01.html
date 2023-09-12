@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue start</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Задание 1</h2>
+      <p>
+        Создать кнопку "Перевернуть". При клике на кнопку текст кнопки, должен
+        перевернуться и отобразиться в обратном порядке.
+      </p>
+      <button @click="reverseText">{{buttonText}}</button>
+
+      <h2>Задание 2 и 3</h2>
+      <p>
+        Есть список элементов. Пользователь может добавлять новые элементы
+        списка с текстом “Новый элемент списка” нажав на кнопку "Добавить".
+      </p>
+      <p>* При клике на элемент списка он должен быть удален. (по желанию)</p>
+      <button @click="addElement">Добавить</button>
+      <div v-for="(element, index) in elementsArray">
+        <p @click="delItem(index)">{{element}}</p>
+      </div>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          buttonText: "Перевернуть",
+          elementsArray: [],
+        },
+
+        methods: {
+          reverseText() {
+            this.buttonText = this.buttonText.split("").reverse().join("");
+          },
+
+          addElement() {
+            this.elementsArray.push(
+              `Новый элемент списка ${this.elementsArray.length}`
+            );
+          },
+
+          delItem(index) {
+            this.elementsArray.splice(index, 1);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
