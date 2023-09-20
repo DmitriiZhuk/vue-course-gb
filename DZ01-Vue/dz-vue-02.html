@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список товаров</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+
+        <button @click="toggleSort">Сортировать по цене ({{ sortBy === 'asc' ? 'по возрастанию' : 'по убыванию' }})</button>
+        
+
+      </div>
+
+      <ul>
+        <li v-for="product in sortedProducts" :key="product.name">
+          {{ product.name }} - {{ product.price }} руб.
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          products: [
+            { name: "Товар 1", price: 50 },
+            { name: "Товар 2", price: 30 },
+            { name: "Товар 3", price: 70 },
+            // Добавьте другие товары
+          ],
+          sortBy: "asc", // По умолчанию сортировка по возрастанию
+        },
+        methods: {
+          toggleSort() {
+            this.sortBy = this.sortBy === "asc" ? "desc" : "asc";
+            this.sortProducts();
+          },
+          sortProducts() {
+            if (this.sortBy === "asc") {
+              this.products.sort((a, b) => a.price - b.price);
+            } else {
+              this.products.sort((a, b) => b.price - a.price);
+            }
+          },
+        },
+        computed: {
+          sortedProducts() {
+            return this.products.slice(); // Создаем копию отсортированного списка
+          },
+        },
+        watch: {
+          sortBy() {
+            this.sortProducts();
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
