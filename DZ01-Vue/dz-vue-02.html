@@ -30,9 +30,9 @@
             { name: "Товар 1", price: 50 },
             { name: "Товар 2", price: 30 },
             { name: "Товар 3", price: 70 },
-            // Добавьте другие товары
+          
           ],
-          sortBy: "asc", // По умолчанию сортировка по возрастанию
+          sortBy: "asc", 
         },
         methods: {
           toggleSort() {
@@ -49,7 +49,7 @@
         },
         computed: {
           sortedProducts() {
-            return this.products.slice(); // Создаем копию отсортированного списка
+            return this.products.slice();
           },
         },
         watch: {
