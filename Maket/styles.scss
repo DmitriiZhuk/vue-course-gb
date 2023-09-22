@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap");
+
+$window-width: 60vw;
+$img-radius: 100px;
+$overall-margin: 0 auto;
+
+%flexRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+%flexColumn {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost";
+}
+
+.top-right {
+  border-top-right-radius: $img-radius;
+}
+
+.top-left {
+  border-top-left-radius: $img-radius;
+}
+
+.bottom-left {
+  border-bottom-left-radius: $img-radius;
+}
+
+.bottom-right {
+  border-bottom-right-radius: $img-radius;
+}
+
+.heading2 {
+  font-size: 55px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: $window-width;
+  margin: $overall-margin;
+
+  .nav {
+    margin-top: 20px;
+    @extend %flexRow;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .nav-links {
+      @extend %flexRow;
+      justify-content: space-around;
+      gap: 10px;
+
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 125%;
+    }
+  }
+
+  .main-show {
+    height: 78vh;
+    background-image: url("img/Photo.svg");
+    border-radius: 40px;
+    padding: 40px;
+    display: flex;
+
+    .main-show_content {
+      width: 40%;
+      @extend %flexColumn;
+      align-content: flex-start;
+      gap: 21px;
+      padding-bottom: 21px;
+
+      .btn-get-started {
+        border-radius: 18px;
+        background: #292f36;
+        box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+        color: white;
+        width: 220px;
+        height: 75px;
+      }
+    }
+  }
+
+  .projects {
+    margin: 21px;
+    @extend %flexColumn;
+
+    .projects-container {
+      width: 50%;
+      text-align: center;
+      margin: 21px 0;
+    }
+  }
+}
+
+.kitchens {
+  width: $window-width;
+  margin: $overall-margin;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  .kitchen {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .kitchen-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.experience {
+  background-color: #f4f0ec;
+  gap: 30px;
+  height: 20vh;
+  display: flex;
+
+  .overall {
+    width: $window-width;
+    margin: $overall-margin;
+
+    @extend %flexRow;
+    justify-content: space-around;
+
+    .exp-content {
+      text-align: center;
+
+      .exp-h2 {
+        color: #cda274;
+        font-size: 85px;
+      }
+    }
+  }
+}
+
+.articles {
+  .articles_block {
+    width: $window-width;
+    margin: $overall-margin;
+    @extend %flexRow;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px;
+
+    .article {
+      @extend %flexColumn;
+      text-align: center;
+    }
+    
+    .article-content {
+      @extend %flexRow;
+      justify-content: space-between;
+    }
+  }
+}
