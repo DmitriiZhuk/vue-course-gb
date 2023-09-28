@@ -3,18 +3,27 @@
     <blog-header />
 
     <blog-main />
+
+    <product-details />
+
+    <blog-footer />
+
   </div>
 </template>
 
 <script>
 import blogHeader from '@/components/blogHeader.vue'
 import blogMain from '@/components/blogMain.vue'
+import ProductDetails from '@/components/ProductDetails.vue'
+import blogFooter from '@/components/blogFooter.vue'
 
 export default {
   name: 'App',
   components: {
     'blog-header': blogHeader,
     'blog-main': blogMain,
+    'product-details': ProductDetails,
+    'blog-footer': blogFooter,
 
   },
 }
