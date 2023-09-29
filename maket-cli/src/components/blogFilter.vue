@@ -1,9 +1,10 @@
 <template lang="">
-    <div class="container kitchens">
-        <div v-for="tag in blog" :key="tag" @click="filterRecords(tag)">
+    <div class="container">
+        <div class='buttons'>
+        <div  v-for="tag in blog" :key="tag" @click="filterRecords(tag)">
             <button class="btn">{{tag}}</button>
         </div>
-
+    </div>
         <div class="container" v-for="(record, index) in  filteredRecords " :key="index">
             <img :src="record.blogImg" alt="" srcset="">
             <h2 class="heading2">{{ record.blogTitle }}</h2>
@@ -58,5 +59,13 @@ export default {
     color: white;
     width: 120px;
     height: 75px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 </style>

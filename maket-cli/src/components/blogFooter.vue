@@ -23,11 +23,15 @@
 
           </div>
 
-          <div>
-            <p><strong>Pages</strong></p>
-            <p>Home</p>
-            <p>Projects</p>
-            <p>Blog</p>
+          <div footer-links>
+            <div><router-link to="/">Home</router-link></div>
+            <div><router-link to="/blog">Blog</router-link></div>
+            <div>
+              <router-link to="/projects">Projects</router-link>
+            </div>
+            <div>
+              <router-link to="/links">Links</router-link>
+            </div>
           </div>
 
           <div>
@@ -46,4 +50,17 @@ export default {
   name: "blogFooter",
 }
 </script>
-<style></style>
+
+<style  scoped>
+.footer {
+  margin-top: 150px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}</style>

@@ -1,28 +1,19 @@
 <template>
   <div id="app">
     <blog-header />
-
-    <blog-main />
-
-    <product-details />
-
+    <router-view />
     <blog-footer />
-
   </div>
 </template>
 
 <script>
 import blogHeader from '@/components/blogHeader.vue'
-import blogMain from '@/components/blogMain.vue'
-import ProductDetails from '@/components/ProductDetails.vue'
 import blogFooter from '@/components/blogFooter.vue'
 
 export default {
   name: 'App',
   components: {
     'blog-header': blogHeader,
-    'blog-main': blogMain,
-    'product-details': ProductDetails,
     'blog-footer': blogFooter,
 
   },
@@ -30,6 +21,27 @@ export default {
 </script>
 
 <style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap");
 
 .articles .articles_block .article-content,
@@ -111,7 +123,7 @@ img {
 
 .container .main-show {
   height: 78vh;
-  /* background-image: url("img/Photo.svg"); */
+  background-image: url('/public/Photo.svg');
   border-radius: 40px;
   padding: 40px;
   display: flex;

@@ -11,21 +11,32 @@
           </div>
 
           <div class="nav-links">
-            <p>Home</p>
-            <p>Projects</p>
-            <p>Links</p>
+            <router-link to="/">Home</router-link>
+            <router-link to="/blog">Blog</router-link>
+            <router-link to="/projects">Projects</router-link>
+            <router-link to="/links">Links</router-link>
           </div>
-        </div>
+         </div>
       </div>
-      <div>
+      <div class="header_img">
         <img src="../../public/blog-top.svg" alt="" srcset="">
       </div>
     </section>
   </div>
 </template>
+
 <script>
-  export default {
-    name: "blogHeader",
-  }
+export default {
+  name: "blogHeader",
+}
 </script>
-<style></style>
+
+<style scoped>
+a {
+  text-decoration: none;
+}
+
+.header_img img {
+  width: 100vw;
+}
+</style>
