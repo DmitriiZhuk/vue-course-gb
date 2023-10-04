@@ -3,8 +3,8 @@ import VueRouter from "vue-router";
 
 import HomeView from "../views/HomeView.vue";
 import BlogView from "../views/BlogView.vue";
-import LinksView from "../views/LinksView.vue";
 import ProjectsView from "../views/ProjectsView.vue";
+import blogProjectDetails from "../components/blogProjectDetails.vue";
 
 Vue.use(VueRouter);
 
@@ -20,14 +20,15 @@ const routes = [
     component: BlogView,
   },
   {
-    path: "/links",
-    name: "links",
-    component: LinksView,
-  },
-  {
     path: "/projects",
     name: "projects",
     component: ProjectsView,
+  },
+  {
+    path: "/projects/:id",
+    name: "projectsDetails",
+    component: blogProjectDetails,
+    props: true,
   },
 ];
 

@@ -14,7 +14,6 @@
             <router-link to="/">Home</router-link>
             <router-link to="/blog">Blog</router-link>
             <router-link to="/projects">Projects</router-link>
-            <router-link to="/links">Links</router-link>
           </div>
          </div>
       </div>

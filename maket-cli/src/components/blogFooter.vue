@@ -29,9 +29,6 @@
             <div>
               <router-link to="/projects">Projects</router-link>
             </div>
-            <div>
-              <router-link to="/links">Links</router-link>
-            </div>
           </div>
 
           <div>
@@ -63,4 +60,5 @@ export default {
 
 a {
   text-decoration: none;
-}</style>
+}
+</style>
