@@ -1,10 +1,10 @@
 <template >
     <div class="container">
-        <div v-for="project in  filteredProject " :key="project.id">
-            <h2>{{ project.id }} - {{ project.subHeading }}</h2>
-            <h3>{{ project.group }}</h3>
-            <p>{{ project.text }}</p>
-            <img :src="`/` + project.imgLink" :alt="project.type">
+        <div>
+            <h2>{{ detailsById(id)[0].id }} - {{ detailsById(id)[0].subHeading }}</h2>
+            <h3>{{ detailsById(id)[0].group }}</h3>
+            <p>{{ detailsById(id)[0].text }}</p>
+            <img :src="`/` + detailsById(id)[0].imgLink" :alt="detailsById(id)[0].type">
         </div>
         <router-link to="/projects">Back to projects</router-link>
     </div>
@@ -15,22 +15,9 @@
 import { mapGetters } from 'vuex'
 export default {
     props: ['id'],
-    data() {
-        return {
-            filteredProject: [],
-            filterId: Number(this.$route.params.id)
-        }
-    },
+
     computed: {
-        ...mapGetters(['allDetails'])
-    },
-    methods: {
-        filteredItem() {
-            this.filteredProject = this.allDetails.filter((row) => row.id === this.filterId)
-        }
-    },
-    mounted() {
-        this.filteredItem()
+        ...mapGetters(['allDetails', 'detailsById'])
     },
 }
 </script>

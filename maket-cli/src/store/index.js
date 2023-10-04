@@ -63,9 +63,12 @@ In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus.
     ],
   },
   getters: {
-    allDetails(state){
-      return state.ourProjectsObject
-    }
+    allDetails(state) {
+      return state.ourProjectsObject;
+    },
+    detailsById: (state) => (id) => {
+      return state.ourProjectsObject.filter((row) => row.id === Number(id));
+    },
   },
   mutations: {},
   actions: {},
