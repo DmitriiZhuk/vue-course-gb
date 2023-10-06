@@ -5,6 +5,7 @@ import HomeView from "../views/HomeView.vue";
 import BlogView from "../views/BlogView.vue";
 import ProjectsView from "../views/ProjectsView.vue";
 import blogProjectDetails from "../components/blogProjectDetails.vue";
+import NotFound from "../views/NotFound.vue";
 
 Vue.use(VueRouter);
 
@@ -29,6 +30,13 @@ const routes = [
     name: "projectsDetails",
     component: blogProjectDetails,
     props: true,
+  },
+
+  //cathcAll 404
+  {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
 

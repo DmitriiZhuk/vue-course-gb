@@ -122,8 +122,9 @@ img {
 }
 
 .container .main-show {
-  height: 78vh;
-  background-image: url('/public/Photo.svg');
+  height: 76vh;
+  background-image: url('/public/Photo.png');
+  background-size: 100%;
   border-radius: 40px;
   padding: 40px;
   display: flex;

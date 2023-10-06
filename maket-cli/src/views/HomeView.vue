@@ -36,7 +36,7 @@
       <div class="kitchens">
         <div class="kitchen">
           <div class="kitchen-img">
-            <img src="/kitchen.svg" class="top-right" alt="kitchen" />
+            <img src="/kitchen.png" class="top-right" alt="kitchen" />
           </div>
           <div class="kitchen-content">
             <div class="text">
@@ -55,7 +55,7 @@
 
         <div class="kitchen">
           <div class="kitchen-img">
-            <img src="/kitchen.svg" class="top-left" alt="kitchen" />
+            <img src="/kitchen.png" class="top-left" alt="kitchen" />
           </div>
           <div class="kitchen-content">
             <div class="text">
@@ -74,7 +74,7 @@
 
         <div class="kitchen">
           <div class="kitchen-img">
-            <img src="/kitchen.svg" class="bottom-right" alt="kitchen" />
+            <img src="/kitchen.png" class="bottom-right" alt="kitchen" />
           </div>
           <div class="kitchen-content">
             <div class="text">
@@ -93,7 +93,7 @@
 
         <div class="kitchen">
           <div class="kitchen-img">
-            <img src="/kitchen.svg" class="bottom-left" alt="kitchen" />
+            <img src="/kitchen.png" class="bottom-left" alt="kitchen" />
           </div>
           <div class="kitchen-content">
             <div class="text">
@@ -153,7 +153,7 @@
       <div class="articles_block">
 
         <div class="article">
-          <img src="/Article.svg" class="top-left top-right" alt="Aritcle">
+          <img src="/Article.png" class="top-left top-right" alt="Aritcle">
           <h2>Let’s Get Solution For Building Construction Work</h2>
 
           <div class="article-content">

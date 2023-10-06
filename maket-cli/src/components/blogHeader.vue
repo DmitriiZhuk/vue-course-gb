@@ -18,7 +18,7 @@
          </div>
       </div>
       <div class="header_img">
-        <img src="../../public/blog-top.svg" alt="" srcset="">
+        <img src="../../public/blog-top.png" alt="" srcset="">
       </div>
     </section>
   </div>
